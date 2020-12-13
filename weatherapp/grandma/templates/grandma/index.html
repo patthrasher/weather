@@ -2,6 +2,11 @@
 <html>
   <head><title>Weather Grandma</title></head>
   <body>
+    {% if messages %}
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+    {% endif %}
     <form method="POST">
       {% csrf_token %}
       <label for="city">Where Grandma At?</label>
