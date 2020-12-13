@@ -5,8 +5,6 @@ from .forms import Weather_form
 from .models import Weather
 
 def index(request) :
-    
-    key = 'secret_key'
 
     if request.method == 'POST' :
         form = Weather_form(request.POST or None)
@@ -26,14 +24,7 @@ def index(request) :
 
             f = data['current']['temp_f']
 
-            print(f)
             context = {
-                'x' : x,
-                # 'api_address' : api_address,
-                'key' : key,
-                'place1' : place1,
-                'place2' : place2,
-                'city' : city,
                 'f' : f,
             }
 
