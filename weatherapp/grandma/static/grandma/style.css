@@ -1,7 +1,19 @@
-p {
-  color: green;
+body {
+    background: white url("images/sky.jpeg") no-repeat;
 }
 
-/* body {
-    background: white url("images/grandma-coat.jpeg") no-repeat;
-} */
+
+.font {
+  font-family: monospace, serif;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px 0 0 15%;
+  font-family: monospace, serif;
+}
+
+.lil-space {
+  padding-right: 10px;
+}

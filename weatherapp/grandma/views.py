@@ -16,8 +16,8 @@ def index(request) :
 
         if form.is_valid() :
             form.save()
-            city = str(Weather.objects.last())
-            city = city.replace(' ', '%20')
+            last_city = str(Weather.objects.last())
+            city = last_city.replace(' ', '%20')
 
             try :
                 service_url = 'http://api.weatherapi.com/v1/current.json?key=' + key + '&q=' + city
@@ -41,6 +41,7 @@ def index(request) :
                 context = {
                 'f' : f,
                 'output' : output,
+                'last_city' : last_city,
                 }
 
                 return render(request, 'grandma/index.html', context)

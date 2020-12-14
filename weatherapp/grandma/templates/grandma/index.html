@@ -4,8 +4,9 @@
 <link rel="stylesheet" type="text/css" href="{% static 'grandma/style.css' %}">
 
 <html>
-  <head><title>Weather Grandma</title></head>
+  <head><title>Weather For Grandma</title></head>
   <body>
+    <div class="center">
     {% if messages %}
       {% for message in messages %}
         {{ message }}
@@ -13,34 +14,31 @@
     {% endif %}
     <form method="POST">
       {% csrf_token %}
-      <label for="city">Where Grandma At?</label>
-      <input type="text" name="city">
+      <label for="city" class="lil-space">Where Grandma At?</label>
+      <span class="lil-space"><input type="text" name="city"></span>
       <input type="submit" name="submit" value="Submit">
     </form>
 
     {% if f %}
-        {{ f }}<br>
-        {{ output }}
         {% if output == 'swim suit' %}
             <img src="{% static 'grandma/images/swimsuit.jpeg' %}" alt="Time to go swimming!"/>
+            <p>It's hot! {{ f }} degrees in {{ last_city }} in fact, time to go swimming Grandma!</p>
         {% endif %}
         {% if output == 'tshirt' %}
             <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!"/>
+            <p>It's {{ f }} degrees out in {{ last_city }}! Put on a t-shirt and get outside Grandma!</p>
         {% endif %}
         {% if output == 'coat' %}
             <img src="{% static 'grandma/images/coat.jpeg' %}" alt="Wear a coat Grandma!"/>
+            <p>Gettin chilly! {{ f }} degrees outside in {{ last_city }}, grab a coat Grandma!</p>
         {% endif %}
         {% if output == 'scarf' %}
             <img src="{% static 'grandma/images/scarf.jpeg' %}" alt="Cold cold cold!"/>
+            <p>Stay inside or wear a scarf, it's freezing Grandma! {{ f }} degrees out there in {{ last_city }}!</p>
         {% endif %}
 
     {% endif %}
 
-
-    <p>test paragraph</p>
-
-    <!-- <img src="{% static 'grandma/images/grandma-coat.jpeg' %}" alt="Coat!"/> -->
-
-
+  </div>
   </body>
 </html>
