@@ -10,7 +10,7 @@ from .models import Weather
 def index(request) :
 
     key = os.environ.get('weather_key')
-    
+
     if request.method == 'POST' :
         form = Weather_form(request.POST or None)
 
@@ -30,8 +30,17 @@ def index(request) :
 
                 f = data['current']['temp_f']
 
+                output = ''
+                if f >= 100 : output = 'swim suit'
+                elif f >=  60 : output = 'tshirt'
+                elif f >= 32 : output = 'coat'
+                else : output = 'scarf'
+
+                print(output)
+
                 context = {
                 'f' : f,
+                'output' : output,
                 }
 
                 return render(request, 'grandma/index.html', context)

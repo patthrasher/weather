@@ -1,4 +1,8 @@
+{% load static %}
 <DOCTYPE html>
+
+<link rel="stylesheet" type="text/css" href="{% static 'grandma/style.css' %}">
+
 <html>
   <head><title>Weather Grandma</title></head>
   <body>
@@ -15,7 +19,28 @@
     </form>
 
     {% if f %}
-        {{ f }}
+        {{ f }}<br>
+        {{ output }}
+        {% if output == 'swim suit' %}
+            <img src="{% static 'grandma/images/swimsuit.jpeg' %}" alt="Time to go swimming!"/>
+        {% endif %}
+        {% if output == 'tshirt' %}
+            <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!"/>
+        {% endif %}
+        {% if output == 'coat' %}
+            <img src="{% static 'grandma/images/coat.jpeg' %}" alt="Wear a coat Grandma!"/>
+        {% endif %}
+        {% if output == 'scarf' %}
+            <img src="{% static 'grandma/images/scarf.jpeg' %}" alt="Cold cold cold!"/>
+        {% endif %}
+
     {% endif %}
+
+
+    <p>test paragraph</p>
+
+    <!-- <img src="{% static 'grandma/images/grandma-coat.jpeg' %}" alt="Coat!"/> -->
+
+
   </body>
 </html>
