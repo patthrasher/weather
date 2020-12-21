@@ -116,3 +116,4 @@ GitHub.sublime-settings
 .history
 
 settings.py
+.DS_Store

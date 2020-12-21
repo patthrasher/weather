@@ -29,7 +29,6 @@ def index(request) :
                 data = json.loads(read)
 
                 f = data['current']['temp_f']
-
                 output = ''
                 if f >= 100 : output = 'swim suit'
                 elif f >=  60 : output = 'tshirt'
