@@ -2,6 +2,16 @@ body {
     background: white url("images/sky.jpeg") no-repeat;
 }
 
+@media (min-height: 788px) {
+  body {
+    background: white url("images/sky.jpeg") repeat;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .font {
   font-family: monospace, serif;
@@ -16,4 +26,15 @@ body {
 
 .lil-space {
   padding-right: 10px;
+}
+
+
+p {
+  color: red;
+}
+
+@media (max-width: 400px) {
+    p {
+      color: blue;
+    }
 }

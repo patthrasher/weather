@@ -4,20 +4,25 @@
 <link rel="stylesheet" type="text/css" href="{% static 'grandma/style.css' %}">
 
 <html>
-  <head><title>Weather For Grandma</title></head>
+  <head >
+    <title>Weather For Grandma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
   <body>
     <div class="center">
-    {% if messages %}
-      {% for message in messages %}
-        {{ message }}
-      {% endfor %}
-    {% endif %}
+    <p>This here is a test paragraph</p>
     <form method="POST">
       {% csrf_token %}
       <label for="city" class="lil-space">Where Grandma At?</label>
       <span class="lil-space"><input type="text" name="city"></span>
       <input type="submit" name="submit" value="Submit">
     </form>
+
+    {% if messages %}
+      {% for message in messages %}
+        <p style="color: dodgerblue;">{{ message }}</p>
+      {% endfor %}
+    {% endif %}
 
     {% if f %}
         {% if output == 'swim suit' %}

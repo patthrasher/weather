@@ -46,7 +46,7 @@ def index(request) :
                 return render(request, 'grandma/index.html', context)
 
             except :
-                messages.error(request, 'Invalid City')
+                messages.error(request, 'Hmm, we can\'t find that place, try another')
                 return redirect('grandma:index')
 
 
