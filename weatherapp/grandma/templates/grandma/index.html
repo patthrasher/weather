@@ -1,7 +1,7 @@
 {% load static %}
 <DOCTYPE html>
 
-<link rel="stylesheet" type="text/css" href="{% static 'grandma/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'grandma/style2.css' %}">
 
 <html>
   <head >
@@ -9,9 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="center">
-    <p>This here is a test paragraph</p>
-    <form method="POST">
+    <div class="center mobile-center">
+    <form method="POST" class="mobile-form">
       {% csrf_token %}
       <label for="city" class="lil-space">Where Grandma At?</label>
       <span class="lil-space"><input type="text" name="city"></span>
@@ -20,7 +19,7 @@
 
     {% if messages %}
       {% for message in messages %}
-        <p style="color: dodgerblue;">{{ message }}</p>
+        <p>{{ message }}</p>
       {% endfor %}
     {% endif %}
 

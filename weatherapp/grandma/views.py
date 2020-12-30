@@ -30,6 +30,7 @@ def index(request) :
 
                 f = data['current']['temp_f']
                 output = ''
+                # f = 101
                 if f >= 100 : output = 'swim suit'
                 elif f >=  60 : output = 'tshirt'
                 elif f >= 32 : output = 'coat'

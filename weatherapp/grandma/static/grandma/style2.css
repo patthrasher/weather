@@ -1,0 +1,20 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+    background: white url("images/sky.jpeg") no-repeat;
+    font-family: monospace, serif;
+}
+
+.mobile-center {
+  margin: auto;
+  width: 85%;
+  /* padding: 10px 0 0 15%; */
+}
+
+.mobile-form {
+  text-align: center;
+  padding: 25px 0 0 0;
+}
