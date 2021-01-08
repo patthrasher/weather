@@ -12,9 +12,13 @@
     <div class="center mobile-center">
     <form method="POST" class="mobile-form">
       {% csrf_token %}
-      <label for="city" class="lil-space">Where Grandma At?</label>
-      <span class="lil-space"><input type="text" name="city"></span>
-      <input type="submit" name="submit" value="Submit">
+      <div>
+        <div class="space">
+          <label for="city">Where Grandma At?</label>
+        </div>
+        <span><input type="text" name="city" placeholder="Enter City">
+          <input type="submit" name="submit" value="Submit"></span>
+        </div>
     </form>
 
     {% if messages %}
@@ -23,13 +27,14 @@
       {% endfor %}
     {% endif %}
 
+    <div class="image-pad">
     {% if f %}
         {% if output == 'swim suit' %}
             <img src="{% static 'grandma/images/swimsuit.jpeg' %}" alt="Time to go swimming!"/>
             <p>It's hot! {{ f }} degrees in {{ last_city }} in fact, time to go swimming Grandma!</p>
         {% endif %}
         {% if output == 'tshirt' %}
-            <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!"/>
+            <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!" class="ri" />
             <p>It's {{ f }} degrees out in {{ last_city }}! Put on a t-shirt and get outside Grandma!</p>
         {% endif %}
         {% if output == 'coat' %}
@@ -42,6 +47,7 @@
         {% endif %}
 
     {% endif %}
+    </div>
 
   </div>
   </body>
