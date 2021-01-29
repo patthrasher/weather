@@ -30,19 +30,19 @@
     <div class="image-pad">
     {% if f %}
         {% if output == 'swim suit' %}
-            <img src="{% static 'grandma/images/swimsuit.jpeg' %}" alt="Time to go swimming!"/>
+            <img src="{% static 'grandma/images/swimsuit.jpeg' %}" alt="Time to go swimming!" class="img-responsive"/>
             <p>It's hot! {{ f }} degrees in {{ last_city }} in fact, time to go swimming Grandma!</p>
         {% endif %}
         {% if output == 'tshirt' %}
-            <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!" class="ri" />
+            <img src="{% static 'grandma/images/tshirt.jpg' %}" alt="T-shirt weather!" class="img-responsive" />
             <p>It's {{ f }} degrees out in {{ last_city }}! Put on a t-shirt and get outside Grandma!</p>
         {% endif %}
         {% if output == 'coat' %}
-            <img src="{% static 'grandma/images/coat.jpeg' %}" alt="Wear a coat Grandma!"/>
+            <img src="{% static 'grandma/images/coat.jpeg' %}" alt="Wear a coat Grandma!" class="img-responsive"/>
             <p>Gettin chilly! {{ f }} degrees outside in {{ last_city }}, grab a coat Grandma!</p>
         {% endif %}
         {% if output == 'scarf' %}
-            <img src="{% static 'grandma/images/scarf.jpeg' %}" alt="Cold cold cold!"/>
+            <img src="{% static 'grandma/images/scarf.jpeg' %}" alt="Cold cold cold!" class="img-responsive"/>
             <p>Stay inside or wear a scarf, it's freezing Grandma! {{ f }} degrees out there in {{ last_city }}!</p>
         {% endif %}
 

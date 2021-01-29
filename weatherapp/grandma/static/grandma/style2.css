@@ -24,12 +24,12 @@ body {
 }
 
 
-@media (min-width: 426px) {
+/* @media (min-width: 426px) {
   .space {
     background-color: green;
     padding-bottom: 25px
   }
-}
+} */
 
 @media (min-width: 1024px) {
   .image-pad {
@@ -38,31 +38,10 @@ body {
   }
 }
 
-img.ri
-{
-	position: absolute;
-	max-width: 80%;
-	top: 10%;
-	left: 10%;
-	border-radius: 3px;
-	box-shadow: 0 3px 6px rgba(0,0,0,0.9);
-}
-
-img.ri:empty
-{
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
-
-@media screen and (orientation: portrait) {
-  img.ri { max-width: 90%; }
-}
-
-@media screen and (orientation: landscape) {
-  img.ri { max-height: 90%; }
+.img-responsive {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
 }
